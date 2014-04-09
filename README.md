@@ -4,11 +4,19 @@ UPYACHKA — web page disease. Symptom: The page with images jerks and jumps dur
 
 It happens when browser doesn’t know dimensions of the images and cannot reserve space for them as it contructs the page.
 
+<img src="http://artpolikarpov.github.io/upyachka.js/examples/sick.gif" width="500" height="370" alt="Page has upyachka">
+
+## Medieval medicine
+
 Earlier it were cured by simply specifying the width and height:
 
 ```html
 <img src="smile.jpg" width="900" height="600" />
 ```
+
+<img src="http://artpolikarpov.github.io/upyachka.js/examples/cured.gif" width="500" height="370" alt="Page is cured of upyachka">
+
+## Still sick
 
 Today in the responsive era we want images to be rubber and add something like this:
 
@@ -21,7 +29,7 @@ img {
 
 Pictures become responsive, okay. But in that case because of `height:auto` browser must download the images to calculate their size and cannot reserve the appropriate space to it. Upyachka again here. Despite the specified `width` and `height`.
 
----
+## Recipe
 
 To cure upyachka, I wrote a tiny plugin that takes `width` and `height` attributes and calculates the size of every responsive image until browser fully loaded and handled them.
 
