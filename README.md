@@ -35,8 +35,8 @@ To cure upyachka, I wrote a tiny plugin that takes `width` and `height` attribut
 
 Please check the examples:
 
-* sick.html
-* cured.html
+* [sick.html](http://artpolikarpov.github.io/upyachka.js/examples/sick.html)
+* [cured.html](http://artpolikarpov.github.io/upyachka.js/examples/cured.html)
 
 To cure your pages add the following to the `<head>` of your page:
 
@@ -51,4 +51,4 @@ Now the layout should be fixed and the images will pop into place when loaded.
 
 ---
 
-<s>©</s>
+~~©~~
