@@ -40,7 +40,7 @@ Please check the examples:
 
 To cure your pages add the following to the `<head>` of your page:
 
-```
+```javascript
 <script src="/path/to/jquery.min.js"></script> <!-- or Zepto -->
 <script src="/path/to/upyachka.min.js"></script>
 ```
@@ -51,4 +51,6 @@ Now the layout should be fixed and the images will pop into place when loaded.
 
 ---
 
-~~©~~
+Licensed under the MIT
+
+*2014, <a href="https://twitter.com/artpolikarpoff/">Artem Polikarpov</a>*
