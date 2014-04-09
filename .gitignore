@@ -1,0 +1,10 @@
+node_modules
+src/bower_components/*
+
+!src/bower_components/jquery/
+src/bower_components/jquery/*
+!src/bower_components/jquery/dist/
+
+!src/bower_components/zepto/
+src/bower_components/zepto/*
+!src/bower_components/zepto/zepto.*js
