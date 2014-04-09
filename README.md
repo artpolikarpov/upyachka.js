@@ -39,6 +39,8 @@ To cure your pages add the following to the `<head>` of your page:
 
 Specify both the height and width attributes for images.
 
+Now the layout should be fixed and the images will pop into place when loaded.
+
 ---
 
 <s>©</s>
