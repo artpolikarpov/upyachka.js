@@ -13,11 +13,9 @@
       style = $img.attr(_style);
       enabled = true;
       if ($img.width() && $img.height()) {
-        console.log('# Not a responsive image, exit', img);
         return;
       }
       fixHeight = function() {
-        console.log('# Force height', img);
         return $img.css({
           height: $img.width() / ratio
         });
@@ -30,7 +28,6 @@
         } else {
           $img.removeAttr(_style);
         }
-        console.log('# Done', img);
         enabled = false;
         $img.removeClass(_upyachka);
         return $window.off(_resize, fixHeight);
@@ -39,7 +36,6 @@
       height = $img.attr('height');
       ratio = width / height;
       if (enabled) {
-        console.log('# Add class `upyachka`', img);
         $img.addClass(_upyachka);
         return $window.on(_resize, fixHeight).trigger(_resize);
       }

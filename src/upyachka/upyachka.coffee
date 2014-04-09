@@ -12,11 +12,11 @@ $ ->
     enabled = true
 
     if $img.width() and $img.height()
-      console.log '# Not a responsive image, exit', img
+      # console.log '# Not a responsive image, exit', img
       return
 
     fixHeight = ->
-      console.log '# Force height', img
+      # console.log '# Force height', img
       $img.css
         height: $img.width() / ratio
 
@@ -26,7 +26,7 @@ $ ->
           style: style
       else
         $img.removeAttr _style
-      console.log '# Done', img
+      # console.log '# Done', img
       enabled = false
       $img.removeClass _upyachka
       $window.off _resize, fixHeight
@@ -36,7 +36,7 @@ $ ->
     ratio = width / height
 
     if enabled
-      console.log '# Add class `upyachka`', img
+      # console.log '# Add class `upyachka`', img
       $img.addClass _upyachka
       $window.on _resize, fixHeight
       .trigger(_resize)

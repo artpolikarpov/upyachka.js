@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 var paths = {
-  coffee: 'coffee/**/*.coffee',
+  coffee: 'upyachka/**/*.coffee',
   dist: '../'
 };
 
