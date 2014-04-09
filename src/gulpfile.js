@@ -18,7 +18,10 @@ gulp.task('compile', function () {
   gulp.src(paths.coffee)
       .pipe(coffee())
       .pipe(concat('upyachka.min.js'))
-      .pipe(uglify(/*{outSourceMap: true}*/))
+      .pipe(uglify({
+        outSourceMap: false,
+        preserveComments: 'some'
+      }))
       .pipe(gulp.dest(paths.dist));
 });
 

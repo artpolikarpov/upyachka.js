@@ -1,3 +1,7 @@
+###!
+  https://github.com/artpolikarpov/upyachka.js
+###
+
 $ ->
   $window = $ window
   _upyachka = 'upyachka'

@@ -1,3 +1,8 @@
+
+/*!
+  https://github.com/artpolikarpov/upyachka.js
+ */
+
 (function() {
   $(function() {
     var $window, _resize, _style, _upyachka;
