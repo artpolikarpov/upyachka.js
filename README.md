@@ -27,7 +27,7 @@ img {
 }
 ```
 
-Pictures become responsive, okay. But in that case because of `height:auto` browser must download the images to calculate their size and cannot reserve the appropriate space to it. Upyachka again here. Despite the specified `width` and `height`.
+Pictures become responsive, okay. But because of `height:auto` in that case browser must download the images to calculate their size and cannot reserve the appropriate space to it. Upyachka again here. Despite the specified `width` and `height`.
 
 ## Recipe
 
