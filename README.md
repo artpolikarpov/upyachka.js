@@ -1,6 +1,6 @@
 # upyachka.js
 
-UPYACHKA, web page disease. Symptoms: the page with images jerks and jumps around during loading. Long pages with large photos are often susceptible to Upyachka.
+UPYACHKA, web page disease. Symptoms: the page with images jerks and jumps around during loading. Long pages with large photos are often susceptible to upyachka.
 
 <img src="http://artpolikarpov.github.io/upyachka.js/examples/sick.gif" width="500" height="370" alt="Page has upyachka">
 
