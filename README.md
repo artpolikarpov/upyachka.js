@@ -1,14 +1,14 @@
 # upyachka.js
 
-UPYACHKA, web page disease. Symptom: The page with images jerks and jumps during loading. Disease most often exposed long pages with large photos.
+UPYACHKA, web page disease. Symptoms: the page with images jerks and jumps around during loading. Long pages with large photos are often susceptible to Upyachka.
 
 <img src="http://artpolikarpov.github.io/upyachka.js/examples/sick.gif" width="500" height="370" alt="Page has upyachka">
 
-It happens when browser doesn’t know dimensions of the images and cannot reserve space for them as it contructs the page.
+It happens when browser doesn’t know the dimensions of images and cannot reserve space for them as it contructs the page.
 
 ## Medieval medicine
 
-Earlier it were cured by simply specifying the width and height:
+Earlier it was treated by simply specifying the width and height:
 
 ```html
 <img src="smile.jpg" width="900" height="600" />
@@ -18,7 +18,7 @@ Earlier it were cured by simply specifying the width and height:
 
 ## Still sick
 
-Today in the responsive era it’s not enough. Quite offen we want images to be rubber and add something like this:
+Today in the responsive era it’s not enough. Quite often we want images to be rubber and add something like this:
 
 ```css
 img {
@@ -27,7 +27,7 @@ img {
 }
 ```
 
-Pictures become responsive, okay. But because of `height:auto` browser must download the images to calculate their size and cannot reserve the appropriate space to it. Upyachka again here. Despite the specified `width` and `height`.
+Pictures become responsive, okay. But because of `height:auto` browser must download the images to calculate their size and cannot reserve the appropriate space to it beforehand. Upyachka again here. Despite the specified `width` and `height`.
 
 ## Recipe
 
