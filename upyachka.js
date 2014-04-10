@@ -73,7 +73,6 @@ cure = function(img) {
     } else {
       img.removeAttribute('style');
     }
-    console.log('# Done', img);
     enabled = false;
     img.className = className;
     return removeEvent(window, 'resize', fixHeight);
