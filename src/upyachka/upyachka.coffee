@@ -33,7 +33,7 @@ cure = (img) ->
       img.setAttribute 'style', style
     else
       img.removeAttribute 'style'
-    console.log '# Done', img
+    # console.log '# Done', img
     enabled = false
     img.className =  className
     removeEvent window, 'resize', fixHeight
