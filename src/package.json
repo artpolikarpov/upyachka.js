@@ -1,10 +1,22 @@
 {
   "name": "upyachka.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "browserify": {
+    "transform": [
+      "coffeeify"
+    ]
+  },
   "devDependencies": {
     "gulp": "^3.6.0",
-    "gulp-coffee": "^1.4.1",
+    "browserify": "^3.39.0",
+    "coffeeify": "^0.6.0",
+    "gulp-notify": "^1.2.5",
+    "vinyl-source-stream": "^0.1.1",
     "gulp-uglify": "^0.2.1",
-    "gulp-concat": "^2.2.0"
+    "gulp-concat": "^2.2.0",
+    "gulp-clean": "^0.2.4"
+  },
+  "dependencies": {
+    "domready": "^1.0.4"
   }
 }

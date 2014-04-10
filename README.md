@@ -31,7 +31,7 @@ Pictures become responsive, okay. But in that case because of `height:auto` brow
 
 ## Recipe
 
-To cure upyachka, I wrote a tiny plugin that takes `width` and `height` attributes and calculates the size of every responsive image until browser fully loaded and handled them.
+To cure upyachka, I wrote a tiny vanilla plugin that takes `width` and `height` attributes and calculates the size of every responsive image until browser fully loaded and handled them.
 
 Please check the examples:
 
@@ -41,7 +41,6 @@ Please check the examples:
 To cure your pages add the following to the `<head>` of your page:
 
 ```html
-<script src="/path/to/jquery.min.js"></script> <!-- or Zepto -->
 <script src="/path/to/upyachka.min.js"></script>
 ```
 

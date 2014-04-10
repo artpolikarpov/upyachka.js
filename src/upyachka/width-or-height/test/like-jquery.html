@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script src="../../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../width-or-height.js"></script>
+
+  <style type="text/css">
+    div {
+      padding: 10px;
+      width: 100px;
+    }
+
+    img {
+      max-width: 10%;
+      height: auto;
+      box-sizing: border-box;
+      border: 1px solid;
+      padding: 10px;
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    //console.log(widthOrHeight(document.getElementsByTagName('div')[0], 'width'));
+
+      $(function () {
+        setTimeout(function () {
+          $('body > *').each(function () {
+
+          console.assert($(this).width() === widthOrHeight(this, 'width'), $(this).width() + ', ' + widthOrHeight(this, 'width'), this);
+          console.assert($(this).height() === widthOrHeight(this, 'height'), $(this).height() + ', ' + widthOrHeight(this, 'height'), this);
+        });
+        }, 1000);
+
+      });
+
+  </script>
+
+</head>
+<body>
+
+<div style="box-sizing: border-box"></div>
+
+<div></div>
+
+<div style="padding: 10px;">123<br>4</div>
+
+<div style="padding: 10px; border: 2px solid; box-sizing: border-box">1234</div>
+
+<img src="http://37.media.tumblr.com/6755c171c47e020419102fb49d3e6f5e/tumblr_n381rrGEmG1st5lhmo1_1280.jpg" />
+
+<img src="http://24.media.tumblr.com/2d617e1700af76ec992eefb82af98a28/tumblr_n381k1R9Sh1st5lhmo1_1280.jpg" width="1280" height="689"/>
+
+
+</body>
+</html>
