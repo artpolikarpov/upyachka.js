@@ -48,6 +48,14 @@ Specify both the height and width attributes for images.
 
 Now the layout should be fixed and the images will pop into place when loaded.
 
+Placehold loading images with background using temporary `upyachka` class:
+
+```css
+img.upyachka {
+  background-color: #f3f3f3;
+}
+```
+
 ---
 
 2014, <a href="https://twitter.com/artpolikarpoff/">Artem Polikarpov</a>
