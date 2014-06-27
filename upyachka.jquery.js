@@ -43,11 +43,19 @@
     };
     var width = img.getAttribute('width');
     var height = img.getAttribute('height');
-    var ratio = width / height;
-    if (enabled) {
-      img.className += ' upyachka';
-      fixHeight();
-      return addEvent(window, 'resize', fixHeight);
+    var ratio;
+    if (width / height) {
+        ratio = width / height;
+    } else {
+        var pxRE = /^[0-9]*\.?[0-9]+px$/i;
+        if (pxRE.test(width) && pxRE.test(height)) {
+            ratio = parseFloat(width) / parseFloat(height);
+        }
+    }
+    if (ratio && enabled) {
+        img.className += ' upyachka';
+        fixHeight();
+        return S.utils.upyachka.addEvent(window, 'resize', fixHeight);
     }
   };
 
