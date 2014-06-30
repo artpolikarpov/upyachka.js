@@ -55,7 +55,7 @@
     if (ratio && enabled) {
         img.className += ' upyachka';
         fixHeight();
-        return S.utils.upyachka.addEvent(window, 'resize', fixHeight);
+        return addEvent(window, 'resize', fixHeight);
     }
   };
 
