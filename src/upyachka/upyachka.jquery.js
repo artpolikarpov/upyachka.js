@@ -1,53 +1,53 @@
-(function () {
-  var addEvent = function (el, event, handler) {
-    if (el.addEventListener) {
-      return el.addEventListener(event, handler, false);
-    } else if (el.attachEvent) {
-      return el.attachEvent('on' + event, handler, false);
-    }
-  };
-
-  var removeEvent = function (el, event, handler) {
-    if (el.removeEventListener) {
-      return el.removeEventListener(event, handler, false);
-    } else if (el.detachEvent) {
-      return el.detachEvent('on' + event, handler, false);
-    }
-  };
-
-  var cure = function () {
-    var img = this;
-    var $img = $(this);
-    var style = img.getAttribute('style');
-    var className = img.className;
-    var enabled = true;
+(function() {
+  function cure($img) {
     if ($img.width() && $img.height()) {
       return;
     }
-    var fixHeight = function () {
-      return img.style.height = (Math.round($img.width() / ratio)) + 'px';
-    };
-    img.onload = function () {
-      if (style) {
-        img.setAttribute('style', style);
-      } else {
-        img.removeAttribute('style');
+
+    var _this = this;
+
+    this.$img = $img;
+    this.style = $img.attr('style');
+    this.ratio = $img.attr('width') / $img.attr('height');
+
+    this.enable();
+
+    $img.on('load', function() {
+      _this.disable();
+    });
+  }
+
+  cure.prototype = {
+    fixHeight: function() {
+      this.$img.css('height', Math.round(this.$img.width() / this.ratio));
+    },
+    enable: function() {
+      this.$img.addClass('upyachka');
+      this.fixHeight();
+      $(window).on('resize.upyachka', this.fixHeight);
+    },
+    disable: function() {
+      if (this.style) {
+        this.$img.attr('style', this.style);
       }
-      enabled = false;
-      img.className = className;
-      return removeEvent(window, 'resize', fixHeight);
-    };
-    var width = img.getAttribute('width');
-    var height = img.getAttribute('height');
-    var ratio = width / height;
-    if (enabled) {
-      img.className += ' upyachka';
-      fixHeight();
-      return addEvent(window, 'resize', fixHeight);
+      else {
+        this.$img.removeAttr('style');
+      }
+      this.enabled = false;
+      this.$img.removeClass('upyachka');
+      $(window).off('resize.upyachka');
     }
   };
 
-  $(function () {
-    $('img[width][height][src]').each(cure);
+  $.fn.upyachka = function() {
+    this.each(function() {
+      new cure($(this));
+    });
+
+    return this;
+  };
+
+  $(function() {
+    $('img[width][height][src]').upyachka();
   });
 })();
